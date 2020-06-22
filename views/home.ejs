@@ -4,4 +4,9 @@
 
 <p><%= homeStartingContent %></p>
 
+<% compose.forEach(function(n){ %>
+ <h1><%=  n.title; %></h1>
+ <p><%=  n.post; %></p>
+<%}); %>
+
 <%- include('partials/footer'); -%>

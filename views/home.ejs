@@ -6,7 +6,9 @@
 
 <% compose.forEach(function(n){ %>
  <h1><%=  n.title; %></h1>
- <p><%=  n.post; %></p>
+ <p><%=  (n.post).substring(0,100)+" ...."; %>
+   <a href="posts/<%= n.title %>">Read More</a>
+ </p>
 <%}); %>
 
 <%- include('partials/footer'); -%>

@@ -57,9 +57,7 @@ app.get("/posts/:title",function(req,res){
   posts.forEach(function(n){
     const url = n.title;
     if(_.lowerCase(reqTitle) === _.lowerCase(url)){
-      console.log("Match Found");
-    }else{
-      console.log("Not Found");
+      res.render("post",{ title: n.title, post: n.post});
     }
   })
 });

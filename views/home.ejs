@@ -4,10 +4,10 @@
 
 <p><%= homeStartingContent %></p>
 
-<% compose.forEach(function(n){ %>
+<% posts.forEach(function(n){ %>
  <h1><%=  n.title; %></h1>
- <p><%=  (n.post).substring(0,100)+" ...."; %>
-   <a href="posts/<%= n.title %>">Read More</a>
+ <p><%=  (n.content).substring(0,100)+" ...."; %>
+   <a href="/posts/<%=n._id%>">Read More</a>
  </p>
 <%}); %>
 
